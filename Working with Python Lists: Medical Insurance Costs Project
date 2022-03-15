@@ -1,0 +1,30 @@
+names = ["Mohamed", "Sara", "Xia", "Paul", "Valentina", "Jide", "Aaron", "Emily", "Nikita", "Paul"]
+insurance_costs = [13262.0, 4816.0, 6839.0, 5054.0, 14724.0, 5360.0, 7640.0, 6072.0, 2750.0, 12064.0]
+
+# Add your code here
+medical_records = zip(insurance_costs , names)
+lst_medical_records = list(medical_records)
+print(lst_medical_records )
+
+num_medical_records = len(lst_medical_records)
+print("There are " + str(num_medical_records) +  " medical records.")
+
+first_medical_record = lst_medical_records[0]
+print("Here is the first medical record: " + str(first_medical_record))
+lst_medical_records.sort()
+print("Here are the medical records sorted by insurance cost: " + str(lst_medical_records))
+
+cheapest_three = lst_medical_records[:3]
+print("Here are the three cheapest insurance costs in our medical records :" + str(cheapest_three))
+
+priciest_three = lst_medical_records[7:]
+print("Here are the three priciest insurance costs in our medical records :" + str(priciest_three))
+
+occurrences_paul = names.count("Paul")
+print("There are " + str(occurrences_paul) + " individuals with the name Paul in our medical records." )
+new_list = list(zip(names ,insurance_costs))
+new_list.sort()
+print(new_list)
+
+middle_five_records = new_list[3:8]
+print(middle_five_records)
